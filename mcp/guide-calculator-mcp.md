@@ -79,6 +79,7 @@ if __name__ == "__main__":
     # "transport='stdio'" means it talks through Standard Input/Output (terminal pipes).
     mcp.run(transport="stdio")
 ```
+```
 ################ Full Calculator ###############
 #def main():
 #    print("Hello from p1-calculator!")
@@ -133,7 +134,7 @@ if __name__ == "__main__":
     # "transport='stdio'" means it talks through Standard Input/Output (terminal pipes).
     mcp.run(transport="stdio")
 
-
+```
 ---
 
 ## Step 3: Configure Claude Desktop
