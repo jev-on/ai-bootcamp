@@ -42,6 +42,9 @@ This example is completely local and does not require any internet access or API
     *   **mcp**: The core Python library (SDK) that allows us to build the server.
     *   **[cli]**: Installs extra developer tools, like the **MCP Inspector**, which helps you test your server in a web browser before connecting it to Claude.
 
+    *After running this command, you will see a new file called `uv.lock`:*
+    *   **uv.lock (The "Itemized Receipt"):** While `pyproject.toml` is your "grocery list" (general needs), `uv.lock` records the **exact version** of every library installed. This ensures the project works identically on every computer. **Don't edit this file manually!**
+
 ---
 
 ## Step 2: Write the Server Code
