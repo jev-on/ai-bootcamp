@@ -39,6 +39,8 @@ This example is completely local and does not require any internet access or API
     ```bash
     uv add "mcp[cli]"
     ```
+    *   **mcp**: The core Python library (SDK) that allows us to build the server.
+    *   **[cli]**: Installs extra developer tools, like the **MCP Inspector**, which helps you test your server in a web browser before connecting it to Claude.
 
 ---
 
