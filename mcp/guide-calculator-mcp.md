@@ -79,6 +79,60 @@ if __name__ == "__main__":
     # "transport='stdio'" means it talks through Standard Input/Output (terminal pipes).
     mcp.run(transport="stdio")
 ```
+################ Full Calculator ###############
+#def main():
+#    print("Hello from p1-calculator!")
+
+
+#if __name__ == "__main__":
+#    main()
+
+
+from mcp.server.fastmcp import FastMCP
+from typing import Union
+
+# 1. Initialize the MCP Server
+mcp = FastMCP("Calculator")
+
+# 2. Define a "Tool" - This is what Claude will see and use
+# The @mcp.tool() decorator tells the system: "Hey, let the AI use this function!"
+@mcp.tool()
+def calc(a: int, b: int, operation: str) -> Union[int, float]:
+    """
+    Performs a mathematical calculation between two numbers.
+
+    :param a: The first number.
+    :param b: The second number.
+    :param operation: The operation to perform.
+                      Can be 'add', 'plus', 'addition',
+                      'sub', 'minus', 'subtract', 'subtraction', 'substration',
+                      'mul', 'times', 'multiply', 'multiplication',
+                      'div', 'divide', 'division'.
+    :return: The result of the calculation.
+    """
+    print("Hello from p1-calculator!")
+    op = operation.lower()
+    if op in ["add", "plus", "addition"]:
+        return a + b
+    elif op in ["sub", "minus", "subtract", "subtraction", "substration"]:
+        return a - b
+    elif op in ["mul", "times", "multiply", "multiplication"]:
+        return a * b
+    elif op in ["div", "divide", "division"]:
+        if b == 0:
+            raise ValueError("Cannot divide by zero.")
+        return a / b
+    else:
+        raise ValueError(f"Unknown operation: {operation}")
+
+
+    
+# 3. Start the server
+if __name__ == "__main__":
+    # This keeps the program running and listening for messages from Claude.
+    # "transport='stdio'" means it talks through Standard Input/Output (terminal pipes).
+    mcp.run(transport="stdio")
+
 
 ---
 
