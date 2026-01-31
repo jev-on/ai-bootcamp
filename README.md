@@ -16,6 +16,3 @@ The [Model Context Protocol](./mcp/) is an open standard that enables AI assista
 ---
 
 ### Future Modules (Coming Soon)
-*   **Prompt Engineering**: Learning the art of communicating with LLMs.
-*   **RAG (Retrieval-Augmented Generation)**: Giving AI access to your custom documents.
-*   **AI Agents**: Building autonomous systems that can solve complex tasks.
