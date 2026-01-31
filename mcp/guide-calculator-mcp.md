@@ -25,7 +25,9 @@ This example is completely local and does not require any internet access or API
     cd calculator-mcp
     ```
 
-2.  **Initialize the project:**
+2.  **source this file :    
+      source $HOME/.local/bin/env
+3.   **Initialize the project:**
     ```bash
     uv init
     ```
@@ -35,7 +37,7 @@ This example is completely local and does not require any internet access or API
     *   `.gitignore`: Tells Git which files to ignore.
     *   `hello.py` (or `main.py`): A starter file. You can delete this, as we'll create our own.
 
-3.  **Add the MCP dependency:**
+4.  **Add the MCP dependency:**
     ```bash
     uv add "mcp[cli]"
     ```
