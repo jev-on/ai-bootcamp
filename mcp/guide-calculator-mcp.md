@@ -6,7 +6,8 @@ This example is completely local and does not require any internet access or API
 
 ## Prerequisites
 
-*   **Claude Desktop App:** Download and install from [anthropic.com/claude/desktop](https://anthropic.com/claude/desktop).
+*   **Claude Desktop App:** Download and install from [claude.ai/download](https://claude.ai/download).
+    *   *Note:* Other apps like **Cursor**, **Zed**, and **Sourcegraph Cody** also support MCP!
 *   **Python:** Ensure Python is installed on your machine.
 *   **uv:** A fast Python tool manager.
     ```bash

@@ -6,6 +6,7 @@ We will build a **Weather Server** that fetches the forecast from **Open-Meteo**
 
 ## Prerequisites
 
+*   **Claude Desktop App:** [Download here](https://claude.ai/download).
 *   You have completed the [Calculator Guide](./guide-calculator-mcp.md).
 *   **uv** is installed.
 
@@ -144,6 +145,6 @@ if __name__ == "__main__":
 
 ## Step 5: Key Concepts Learned
 
-1.  **Async/Await:** Web requests are slow. We use `async` so our code doesn't freeze while waiting for the NWS website to reply.
-2.  **External APIs:** This MCP server acts as a bridge. Claude asks the server, the server asks NWS, and the answer flows back.
+1.  **Tool Chaining:** You saw how Claude automatically used one tool (`get_coordinates`) to get the data it needed for another tool (`get_weather`).
+2.  **External APIs:** This MCP server acts as a bridge. Claude asks the server, the server calls Open-Meteo, and the answer flows back.
 3.  **Multiple Servers:** You can have as many MCP servers running as you want (Calculator + Weather + Files, etc.).
