@@ -79,6 +79,8 @@ if __name__ == "__main__":
     # "transport='stdio'" means it talks through Standard Input/Output (terminal pipes).
     mcp.run(transport="stdio")
 ```
+Alternatively, you can try the below code that does addition, subtraction, division and multiplication.
+
 ```python
 ################ Full Calculator ###############
 #def main():
