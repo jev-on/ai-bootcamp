@@ -92,7 +92,13 @@ Now we need to tell Claude where to find your calculator.
     code ~/Library/Application\ Support/Claude/claude_desktop_config.json
     ```
 
-2.  **Add the Server Config:**
+    OR for VSCode
+
+    ```bash
+    code /Users/jevon/Library/Application\ Support/Code/User/mcp.json
+    ```
+
+3.  **Add the Server Config:**
     Paste this JSON into the file. 
     **Important:** Replace `/Users/YOUR_NAME/path/to/calculator-mcp` with your actual folder path (run `pwd` in your terminal to find it).
 
@@ -112,7 +118,7 @@ Now we need to tell Claude where to find your calculator.
     }
     ```
 
-3.  **Restart Claude:**
+4.  **Restart Claude:**
     Completely Quit (Cmd+Q) and reopen Claude Desktop.
 
 ---
