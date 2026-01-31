@@ -28,6 +28,11 @@ This example is completely local and does not require any internet access or API
     ```bash
     uv init
     ```
+    *This creates a few standard files:*
+    *   `pyproject.toml`: The recipe book for your project (lists dependencies).
+    *   `.python-version`: Locks the Python version so it works consistently.
+    *   `.gitignore`: Tells Git which files to ignore.
+    *   `hello.py` (or `main.py`): A starter file. You can delete this, as we'll create our own.
 
 3.  **Add the MCP dependency:**
     ```bash
