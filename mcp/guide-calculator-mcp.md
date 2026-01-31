@@ -79,7 +79,7 @@ if __name__ == "__main__":
     # "transport='stdio'" means it talks through Standard Input/Output (terminal pipes).
     mcp.run(transport="stdio")
 ```
-```
+```python
 ################ Full Calculator ###############
 #def main():
 #    print("Hello from p1-calculator!")
