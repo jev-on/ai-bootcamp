@@ -20,8 +20,8 @@ This example is completely local and does not require any internet access or API
 
 1.  **Create a directory:**
     ```bash
-    mkdir my-first-mcp
-    cd my-first-mcp
+    mkdir calculator-mcp
+    cd calculator-mcp
     ```
 
 2.  **Initialize the project:**
@@ -83,7 +83,7 @@ Now we need to tell Claude where to find your calculator.
 
 2.  **Add the Server Config:**
     Paste this JSON into the file. 
-    **Important:** Replace `/Users/YOUR_NAME/path/to/my-first-mcp` with your actual folder path (run `pwd` in your terminal to find it).
+    **Important:** Replace `/Users/YOUR_NAME/path/to/calculator-mcp` with your actual folder path (run `pwd` in your terminal to find it).
 
     ```json
     {
@@ -92,7 +92,7 @@ Now we need to tell Claude where to find your calculator.
           "command": "uv",
           "args": [
             "--directory",
-            "/Users/YOUR_NAME/path/to/my-first-mcp",
+            "/Users/YOUR_NAME/path/to/calculator-mcp",
             "run",
             "calculator.py"
           ]
