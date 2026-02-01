@@ -265,3 +265,14 @@ uv run weather_agent_gemini.py
 
 **Try asking:** "What is the weather in London?"
 Watch the console. You will see it print `--- [TOOL] ...` automatically!
+
+**Example:**
+```
+> uv run weather_agent_gemini.py 
+Agent ready! Ask me about the weather (or type 'quit').
+You: what is the weather in Kauai
+--- [TOOL] Looking up coordinates for Kauai...
+--- [TOOL] Looking up coordinates for Kauai, Hawaii...
+--- [TOOL] Looking up coordinates for Lihue...
+--- [TOOL] Fetching weather for 21.98121,-159.3721...
+```
