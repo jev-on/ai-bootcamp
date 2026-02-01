@@ -22,6 +22,14 @@ Move beyond static tools. Build Python programs that can "think" and act autonom
 *   **[Reference: Gemini API](./agent/gemini-reference.md)**: Rate limits and model info.
 *   **[Guide: Weather Agent](./agent/guide-weather-agent.md)**: Build an autonomous agent loop that checks the weather.
 
+### 3. Smart Agents (The Daily Briefing)
+Learn to build proactive assistants that run on a schedule and notify you where you already live (Email/Discord).
+
+*   **[Overview](./agent/smart-agent/README.md)**: Automation, Scheduling, and Safety.
+*   **[Guide: Email & Discord MCPs](./agent/smart-agent/guide-notification-tools.md)**: Building tools that can "Write" to the outside world.
+*   **[Guide: The Briefing Agent](./agent/smart-agent/guide-briefing-agent.md)**: Combining weather and notifications into one script.
+*   **[Guide: Scheduling (Local & GitHub Actions)](./agent/smart-agent/guide-scheduling.md)**: Setting your agent on autopilot.
+
 ---
 
 ### Future Modules

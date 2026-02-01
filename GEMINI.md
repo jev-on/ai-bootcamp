@@ -35,13 +35,14 @@ The repository is organized by learning modules:
 *   **[COMPLETE] Module 1: MCP**
     *   Created `calculator-mcp` (Local logic).
     *   Created `weather-mcp` (Open-Meteo API, Tool Chaining).
-*   **[IN PROGRESS] Module 2: Agents**
+*   **[COMPLETE] Module 2: Basic Agents**
     *   Setup `hello-claude` and `hello-gemini`.
-    *   Established connection to LLM APIs via Python.
     *   Created `guide-weather-agent.md` (weather-claude, weather-gemini).
-*   **[PLANNED] Module 3: Smart Agents**
-    *   Focus: Logic Patterns (not infrastructure).
-    *   Topics: Memory (JSON persistence), Human-in-the-Loop (Safety), Planning chains.
+*   **[IN PROGRESS] Module 3: Smart Agents (The Daily Briefing)**
+    *   Focus: Practical Automation & Scheduling.
+    *   New Tools: `email-mcp`, `discord-mcp` (or Telegram).
+    *   New Agent: `daily-briefing-agent`.
+    *   Deployment: Local (NAS/Desktop) and Cloud (GitHub Actions).
 *   **[PLANNED] Module 4: The Platform**
     *   Focus: Systems Engineering.
     *   Goal: Build a Universal MCP Client using `subprocess` and `stdio` pipes to connect to ANY server.
