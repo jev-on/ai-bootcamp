@@ -112,9 +112,9 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 print("Asking Gemini...")
 
 # 3. Send the message
-# We use the "gemini-2.0-flash" model (fast and free).
+# We use the "gemini-2.5-flash" model (current stable and fast).
 response = client.models.generate_content(
-    model="gemini-2.0-flash",
+    model="gemini-2.5-flash",
     contents="Hello! Who are you?"
 )
 
