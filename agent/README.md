@@ -10,6 +10,9 @@ Unlike a simple chatbot, an agent can:
 2.  **Act:** Use tools (like your Weather MCP) to get information.
 3.  **Observe:** Read the tool's output and decide what to do next.
 
+## Recommended Resources
+*   **[Video: What are AI Agents?](https://youtu.be/ftBWgcwvEk4?si=PnUs5kpVOtsE6HoJ)** - A highly recommended high-level overview of AI Agents and how they work.
+
 ## Learning Path
 1.  **[LLM vs. Agent](./llm-vs-agent.md):** Understanding the "Chef vs. Kitchen" analogy.
 2.  **[Hello Agent](./guide-hello-agent.md):** Writing your first Python script to talk to an LLM API.
