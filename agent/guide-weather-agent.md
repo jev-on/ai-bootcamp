@@ -1,10 +1,14 @@
 # Guide: Building Your First Agent (Weather Bot)
 
-Now that you can talk to the LLM via code, it's time to give it **superpowers**.
+Now that you can talk to the LLM via code, it's time to give it **superpowers**. 🚀
 
 In this guide, we will build a **Weather Agent**.
-*   It won't just "chat."
-*   It will **autonomously** use Python functions to look up real data.
+*   It won't just "chat." 💬
+*   It will **autonomously** use Python functions to look up real-time data from the internet! 🌍
+
+**Choose your path below:**
+*   [**Path A: Anthropic (Claude)**](#path-a-anthropic-claude) - Manual tool loop (The "Mechanics" path).
+*   [**Path B: Google (Gemini)**](#path-b-google-gemini) - Automatic tool loop (The "Self-Driving" path).
 
 ## The Concept: The Agent Loop 🔄
 
