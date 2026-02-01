@@ -12,15 +12,15 @@ In this guide, we will build a **Weather Agent**.
 
 Until now, you have been *using* AI. Now, you are *engineering* it. 
 
-We are effectively going to build a mini version of **Claude Desktop** ourselves! 🛠️
+We are effectively going to build a mini version of **Claude Desktop** ourselves! 🛠️ This loop is the "heartbeat" of an **AI Agent**.
 
-When you used the MCP server before, the Claude app handled all the hard work behind the scenes. Now, **YOU** are building that engine. You are writing the code that decides when to talk, when to act, and when to answer.
+When you used the MCP server before, the Claude app was the agent. Now, **YOU** are building that agent. You are writing the code that decides when to talk, when to act, and when to answer.
 
-1.  **User:** "What is the weather in Tokyo?"
-2.  **LLM (Think):** "I don't know, but I have a tool called `get_weather`. I should use it." -> *Returns a Tool Call Request*.
-3.  **Your Script (Act):** Sees the request. Runs the Python function. Gets "15°C".
-4.  **LLM (Observe):** Sees the result "15°C".
-5.  **LLM (Answer):** "The weather in Tokyo is 15°C."
+1.  **User:** "What is the weather in Tokyo?" 🇯🇵
+2.  **LLM (Think):** "I don't know, but I have a tool called `get_weather`. I should use it." 🧠
+3.  **The Agent (Act):** Your Python script sees the request, runs the tool, and gets "15°C". ⚡
+4.  **LLM (Observe):** Receives the result "15°C" and understands what it means. 👀
+5.  **The Agent (Answer):** Delivers the final response to the user. 🎤
 
 **Choose your path below:**
 *   [**Path A: Anthropic (Claude)**](#path-a-anthropic-claude) - Manual tool loop (The "Mechanics" path).
