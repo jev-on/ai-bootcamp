@@ -37,11 +37,12 @@ Focuses on building "Production-Ready" agents that work autonomously in the back
 
 **Module 3: Smart Agents (The Daily Briefing)**
 *   **Concepts:**
-    *   **[Module Overview](./agent/smart-agent/README.md)**: The 4 Pillars of AI Engineering (Side Effects, Guardrails, Persistence, Orchestration).
+    *   **[Module Overview](./agent/smart-agent/README.md)**: The 5 Pillars of AI Engineering (Side Effects, Guardrails, Persistence, Reflection, Orchestration).
 *   **Guides (Build It):**
     *   **[1. Notification Tools](./agent/smart-agent/guide-notification-tools.md)**: Building Email and Discord MCPs.
     *   **[2. The Briefing Agent](./agent/smart-agent/guide-briefing-agent.md)**: Putting it all together.
-    *   **[3. Scheduling](./agent/smart-agent/guide-scheduling.md)**: Setting the agent on autopilot.
+    *   **[3. Self-Correction](./agent/smart-agent/guide-reflection.md)**: Building an agent that checks its own work.
+    *   **[4. Scheduling](./agent/smart-agent/guide-scheduling.md)**: Setting the agent on autopilot.
 
 ---
 

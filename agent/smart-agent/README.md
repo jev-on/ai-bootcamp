@@ -10,17 +10,19 @@ Build a "Daily Briefing Agent" that:
 4.  **Notifies you** via Email and/or Discord.
 
 ## What you will learn
-Building a scheduled agent teaches you the four pillars of advanced AI engineering:
+Building a scheduled agent teaches you the five pillars of advanced AI engineering:
 
 1.  **Side Effects (Action Tools):** Building MCPs that *write* or *send* (not just read). 
 2.  **Guardrails (Safety):** Implementing autonomous validation to ensure your agent doesn't spam or send empty data (Safety without a human-in-the-loop).
 3.  **Persistence (Memory):** Using simple files to save state so your agent "remembers" what it sent yesterday.
-4.  **Orchestration (Scheduling):** Moving from a script you run manually to a service that runs on autopilot (Local vs Cloud).
+4.  **Reflection (Self-Correction):** Teaching your agent to review and critique its own work before finishing a task.
+5.  **Orchestration (Scheduling):** Moving from a script you run manually to a service that runs on autopilot (Local vs Cloud).
 
 ## Learning Path
 1.  **[Email & Discord MCPs](./guide-notification-tools.md):** The "Hands." Learn to manage **Side Effects**.
 2.  **[The Briefing Agent](./guide-briefing-agent.md):** The "Brain & Conscience." Combine multiple tools and implement **Guardrails** and **Persistence**.
-3.  **[Scheduling](./guide-scheduling.md):** The "Clock." Set your agent on autopilot using **Orchestration**.
+3.  **[Self-Correction](./guide-reflection.md):** The "Editor." Implement **Reflection** to improve output quality.
+4.  **[Scheduling](./guide-scheduling.md):** The "Clock." Set your agent on autopilot using **Orchestration**.
 
 ## Security Note 🔐
 We will be using **GitHub Secrets** and **Environment Variables** to ensure your API keys and Email passwords are never exposed.

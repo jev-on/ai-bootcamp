@@ -41,7 +41,7 @@ The repository is organized by learning modules:
     *   Created `guide-weather-agent.md` (weather-claude, weather-gemini).
 *   **[IN PROGRESS] Module 3: Smart Agents (The Daily Briefing)**
     *   Focus: Advanced AI engineering pillars.
-    *   Topics: Side Effects (Action tools), Guardrails (Autonomous safety), Persistence (File state), Orchestration (Scheduling).
+    *   Topics: Side Effects (Action tools), Guardrails (Autonomous safety), Persistence (File state), Reflection (Self-correction), Orchestration (Scheduling).
     *   Deployment: Local (NAS/Desktop) and Cloud (GitHub Actions).
 *   **[PLANNED] Module 4: The Platform**
     *   Focus: Systems Engineering.
