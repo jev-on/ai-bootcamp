@@ -38,7 +38,13 @@ The repository is organized by learning modules:
 *   **[IN PROGRESS] Module 2: Agents**
     *   Setup `agent-claude` and `agent-gemini`.
     *   Established connection to LLM APIs via Python.
-    *   Next Step: Binding MCP tools to the Agent script.
+    *   Created `guide-weather-agent.md` (Auto-function calling).
+*   **[PLANNED] Module 3: Smart Agents**
+    *   Focus: Logic Patterns (not infrastructure).
+    *   Topics: Memory (JSON persistence), Human-in-the-Loop (Safety), Planning chains.
+*   **[PLANNED] Module 4: The Platform**
+    *   Focus: Systems Engineering.
+    *   Goal: Build a Universal MCP Client using `subprocess` and `stdio` pipes to connect to ANY server.
 
 ## 5. Useful Commands
 *   Run script: `uv run filename.py`

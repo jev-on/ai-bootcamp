@@ -21,4 +21,6 @@ Move beyond static tools. Build Python programs that can "think" and act autonom
 
 ---
 
-### Future Modules (Coming Soon)
+### Future Modules
+*   **Module 3: Smart Agents**: Giving your agent Memory, Safety (Human-in-the-loop), and Planning capabilities.
+*   **Module 4: The Platform**: Building a Universal MCP Client to connect to *any* tool ecosystem.

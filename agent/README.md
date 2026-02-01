@@ -20,3 +20,9 @@ Unlike a simple chatbot, an agent can:
 ## Prerequisites
 *   **API Key:** You will need an API key from an LLM provider (Anthropic, OpenAI, or Gemini).
 *   **Python:** Basic knowledge of Python functions.
+
+## What Next?
+In **Module 3 (Smart Agents)**, we will address the biggest limitations of the agent you just built:
+1.  **Amnesia:** It forgets everything when you restart the script.
+2.  **Danger:** It executes tools without asking.
+We will learn to add **Memory** and **Safety Checks** to build a robust assistant.
