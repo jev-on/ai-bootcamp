@@ -25,8 +25,9 @@ This repository is a structured learning environment for Artificial Intelligence
 The repository is organized by learning modules:
 *   **`mcp/` (Module 1):** Documentation and guides for the Model Context Protocol.
     *   Contains: `guide-calculator-mcp.md`, `guide-weather-mcp.md`.
-*   **`agent/` (Module 2):** Documentation for building Autonomous Agents.
-    *   Contains: `guide-hello-agent.md`, `gemini-reference.md`, `llm-vs-agent.md`, `guide-weather-agent.md`.
+*   **`agent/` (Module 2 & 3):** Documentation for building Autonomous Agents.
+    *   **`basics/` (Module 2):** `guide-hello-agent.md`, `guide-weather-agent.md`, `learn-llm-vs-agent.md`, `ref-gemini-api.md`.
+    *   **`smart-agent/` (Module 3):** Guides for the Daily Briefing Agent.
 *   **Root Files:**
     *   `GEMINI.md`: Context anchor for the AI assistant (Tech stack, progress, rules).
     *   `README.md`: The curriculum homepage for students.
