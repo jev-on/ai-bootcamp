@@ -86,20 +86,27 @@ Create `weather_agent_gemini.py`.
 import os
 from dotenv import load_dotenv
 from google import genai
-# Import the tools we just wrote
+
+# 1. Import the specific tools we wrote in the other file
+# These are just regular Python functions!
 from weather_tools import get_coordinates, get_weather
 
+# 2. Load our API key from the .env file
 load_dotenv()
 
+# 3. Create the Gemini Client
+# This is our connection to the Google AI servers.
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
-# 1. We wrap our functions in a simple dictionary configuration
-# This tells Gemini: "Here are the tools you are allowed to use."
+# 4. Tool Registration
+# We put our functions into a list. 
+# This tells Gemini: "You are allowed to use these specific Python tools."
 tools = [get_coordinates, get_weather]
 
-# 2. Start the Chat
-# We enable 'automatic_function_calling=True'. 
-# This is the magic. The SDK will run the Python code for us!
+# 5. Start the Autonomous Chat
+# We use gemini-3-flash and enable 'AUTO' function calling.
+# This means if Gemini needs the weather, it will ASK our script to run 
+# the Python functions, get the result, and continue the conversation!
 chat = client.chats.create(
     model="gemini-3-flash",
     config={
@@ -110,12 +117,22 @@ chat = client.chats.create(
 
 print("Agent ready! Ask me about the weather (or type 'quit').")
 
+# 6. The User Loop
+# This keeps the program running so we can have a back-and-forth conversation.
 while True:
     user_input = input("You: ")
+    
+    # Allow the user to exit the program
     if user_input.lower() in ["quit", "exit"]:
+        print("Goodbye!")
         break
         
+    # Send the user's question to the agent.
+    # Because 'AUTO' mode is on, Gemini will handle all the tool calls 
+    # in the background before returning the final text answer.
     response = chat.send_message(user_input)
+    
+    # Print the final answer from the AI
     print(f"Agent: {response.text}")
 ```
 
