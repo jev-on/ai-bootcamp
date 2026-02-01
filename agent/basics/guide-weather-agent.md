@@ -17,10 +17,12 @@ We are effectively going to build a mini version of **Claude Desktop** ourselves
 When you used the MCP server before, the Claude app was the agent. Now, **YOU** are building that agent. You are writing the code that decides when to talk, when to act, and when to answer.
 
 1.  **User:** "What is the weather in Tokyo?" 🇯🇵
-2.  **LLM (Think):** "I don't know, but I have a tool called `get_weather`. I should use it." 🧠
-3.  **The Agent (Act):** Your Python script sees the request, runs the tool, and gets "15°C". ⚡
-4.  **LLM (Observe):** Receives the result "15°C" and understands what it means. 👀
-5.  **The Agent (Answer):** Delivers the final response to the user. 🎤
+2.  **LLM (Think):** "I need coordinates for Tokyo. I'll use `get_coordinates`." 🧠
+3.  **The Agent (Act):** Your script runs `get_coordinates("Tokyo")` and returns `35.6, 139.6`. ⚡
+4.  **LLM (Think):** "Now I have coordinates. I'll use `get_weather`." 🧠
+5.  **The Agent (Act):** Your script runs `get_weather(35.6, 139.6)` and gets "15°C". ⚡
+6.  **LLM (Observe):** Receives the result "15°C" and understands it. 👀
+7.  **The Agent (Answer):** Delivers the final response to the user. 🎤
 
 **Choose your path below:**
 *   [**Path A: Anthropic (Claude)**](#path-a-anthropic-claude) - Manual tool loop (The "Mechanics" path).
