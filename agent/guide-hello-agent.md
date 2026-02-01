@@ -4,6 +4,9 @@ Before we can build an autonomous agent, we need to learn how to talk to the "Br
 
 **Choose your path below:**
 
+*   [**Path A: Anthropic (Claude)**](#path-a-anthropic-claude) - Best for complex reasoning and coding.
+*   [**Path B: Google (Gemini)**](#path-b-google-gemini) - Best for speed and a free tier.
+
 ---
 
 ## Path A: Anthropic (Claude)
@@ -35,11 +38,19 @@ import os
 from dotenv import load_dotenv
 from anthropic import Anthropic
 
+# 1. Load secrets from the .env file
+# This is a security step so we don't put passwords directly in the code.
 load_dotenv()
 
+# 2. Connect to Anthropic
+# We create a "client" object that knows how to talk to Claude.
 client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
 print("Asking Claude...")
+
+# 3. Send the message
+# We ask for "claude-3-5-sonnet" (the smart one).
+# max_tokens=1000 means "don't write an essay longer than 1000 words".
 response = client.messages.create(
     model="claude-3-5-sonnet-20241022",
     max_tokens=1000,
@@ -47,6 +58,9 @@ response = client.messages.create(
         {"role": "user", "content": "Hello! Who are you?"}
     ]
 )
+
+# 4. Print the answer
+# The response comes back as a complex object. We dig into it to find the text.
 print(f"Claude says: {response.content[0].text}")
 ```
 
@@ -87,15 +101,25 @@ import os
 from dotenv import load_dotenv
 from google import genai
 
+# 1. Load secrets from the .env file
+# This keeps your API key safe and out of the code.
 load_dotenv()
 
+# 2. Connect to Google
+# We create a "client" using the key we just loaded.
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 print("Asking Gemini...")
+
+# 3. Send the message
+# We use the "gemini-2.0-flash" model (fast and free).
 response = client.models.generate_content(
     model="gemini-2.0-flash",
     contents="Hello! Who are you?"
 )
+
+# 4. Print the answer
+# Gemini's response object is simpler; we just ask for .text
 print(f"Gemini says: {response.text}")
 ```
 
