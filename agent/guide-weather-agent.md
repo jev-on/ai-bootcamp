@@ -22,13 +22,19 @@ When you used the MCP server before, the Claude app handled all the hard work be
 4.  **LLM (Observe):** Sees the result "15°C".
 5.  **LLM (Answer):** "The weather in Tokyo is 15°C."
 
----
+## Path A: Anthropic (Claude)
 
-## Step 1: The Tools
+Claude handles tools using a **Manual Loop**. This is great because it lets you see exactly how the "Think-Act-Observe" cycle works step-by-step.
 
-We need the actual Python functions first. We will use the same logic from our MCP module, but we'll paste it here so our agent can use it directly.
+### 1. Setup
+Make sure you are in your `agent-claude` folder.
+```bash
+cd agent-claude
+uv add anthropic requests
+```
 
-Create a file named `weather_tools.py`:
+### 2. Create the Tools
+Create a file named `weather_tools.py` inside your `agent-claude` folder.
 
 ```python
 import requests
@@ -50,29 +56,7 @@ def get_weather(latitude: float, longitude: float):
     return response["current_weather"]
 ```
 
----
-
-## Step 2: Choose Your Path
-
-Different LLMs handle tools differently. Choose your path:
-
-*   [**Path A: Anthropic (Claude)**](#path-a-anthropic-claude) - Manual tool loop (Great for understanding how it works).
-*   [**Path B: Google (Gemini)**](#path-b-google-gemini) - Automatic tool loop (Easier/Magic).
-
----
-
-## Path A: Anthropic (Claude)
-
-Claude handles tools using a **Manual Loop**. This is great because it lets you see exactly how the "Think-Act-Observe" cycle works step-by-step.
-
-### 1. Setup
-Make sure you are in your `agent-claude` folder.
-```bash
-cd agent-claude
-uv add anthropic requests
-```
-
-### 2. The Code
+### 3. The Code
 Create `weather_agent_claude.py`. 
 
 ```python
@@ -180,14 +164,37 @@ uv run weather_agent_claude.py
 Gemini has a feature called **"Automatic Function Calling"**. You just give it the functions, and it handles the loop for you!
 
 ### 1. Setup
-Make sure you are in your `agent-gemini` folder (from the previous guide).
+Make sure you are in your `agent-gemini` folder.
 ```bash
 cd agent-gemini
 # Ensure you have the library
-uv add google-genai
+uv add google-genai requests
 ```
 
-### 2. The Code
+### 2. Create the Tools
+Create a file named `weather_tools.py` inside your `agent-gemini` folder.
+
+```python
+import requests
+
+def get_coordinates(city_name: str):
+    """Finds latitude and longitude for a city."""
+    print(f"--- [TOOL] Looking up coordinates for {city_name}...")
+    url = f"https://geocoding-api.open-meteo.com/v1/search?name={city_name}&count=1&language=en&format=json"
+    response = requests.get(url).json()
+    if "results" in response:
+        return response["results"][0]
+    return None
+
+def get_weather(latitude: float, longitude: float):
+    """Fetches weather for lat/long."""
+    print(f"--- [TOOL] Fetching weather for {latitude},{longitude}...")
+    url = f"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current_weather=true"
+    response = requests.get(url).json()
+    return response["current_weather"]
+```
+
+### 3. The Code
 Create `weather_agent_gemini.py`.
 
 ```python
