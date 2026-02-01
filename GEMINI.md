@@ -26,7 +26,7 @@ The repository is organized by learning modules:
 *   **`mcp/` (Module 1):** Documentation and guides for the Model Context Protocol.
     *   Contains: `guide-calculator-mcp.md`, `guide-weather-mcp.md`.
 *   **`agent/` (Module 2):** Documentation for building Autonomous Agents.
-    *   Contains: `guide-hello-agent.md`, `gemini-reference.md`.
+    *   Contains: `guide-hello-agent.md`, `gemini-reference.md`, `llm-vs-agent.md`, `guide-weather-agent.md`.
 *   **Root Files:**
     *   `GEMINI.md`: Context anchor for the AI assistant (Tech stack, progress, rules).
     *   `README.md`: The curriculum homepage for students.
