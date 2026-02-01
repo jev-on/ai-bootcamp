@@ -12,7 +12,7 @@ Build a "Daily Briefing Agent" that:
 ## What you will learn
 In this module, we move from "Toys" to "Production Systems" by mastering the **5 Pillars of Agentic Design**:
 
-1.  **Side Effects (Action Tools) ⚡**
+1.  **Real-World Actions (Side Effects) ⚡**
     *   **Concept:** Learning how to manage tools that *change* the world (Send Email, Delete File, Buy Stock) rather than just *reading* data (Calculator, Weather).
     *   **Why it matters:** Real agents are useless if they can't take action.
 
