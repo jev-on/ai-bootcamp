@@ -51,4 +51,5 @@ If your automation uses advanced features, additional shared limits apply:
 
 ## 5. Official Documentation
 
+*   **[Google AI Studio Usage & Quotas](https://aistudio.google.com/usage)** - View your real-time usage. Click on the **"Rate Limit"** tab to see your specific quotas for each model.
 *   **[Gemini API Python Quickstart](https://ai.google.dev/gemini-api/docs/quickstart)** - The official guide for the SDK we are using in this module.
