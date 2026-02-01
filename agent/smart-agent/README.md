@@ -26,11 +26,16 @@ To build our **Daily Briefing Agent**, we are assembling a system with these fiv
 *   **Analogy:** The **Quality Check**. A second expert looking at the radar map to confirm the forecast is accurate before they go "Live."
 *   **Why:** Prevents "False Alarms" (hallucinations) and ensures the message is clear.
 
+
+### 🛡️ The Safety Switch (The Guardrail)
+*   **Analogy:** The **Fire Extinguisher**.
+*   **The Concept:** Hard-coded Python logic that stops a system meltdown (like sending 1,000 emails) before it happens.
+
 ---
 
-## 🔍 Perception vs. Tools: The "Grand Unified Theory"
+## 🔍 Perception vs. Tools: 
 
-You hit on the most important technical nuance: **Perception uses tools.** To help your students, think of it as a distinction between **Input Tools** and **Output Tools**.
+**Perception uses tools.** To help understand Perception, think of it as a distinction between **Input Tools** and **Output Tools**.
 
 *   **Perception (Input Tools):** These are tools used to bring information **IN**. The agent is a "passive observer" or a "detective."
     *   *Analogy:* The satellite taking a picture. It doesn't change the weather; it just reports on it.
@@ -56,20 +61,18 @@ When beginners build agents, they often try to make the Brain do the Perception 
 | **4. Notebook** | The Context | The **Almanac** comparing today to last week. |
 | **5. 2nd Opinion** | The Quality | The **Supervisor** ensuring the alert isn't a glitch. |
 
-### 🛡️ The Safety Switch (The Guardrail)
-*   **Analogy:** The **Fire Extinguisher**.
-*   **The Concept:** Hard-coded Python logic that stops a system meltdown (like sending 1,000 emails) before it happens.
-
 ---
 
 ## 🚀 Our Project: "The Smart Morning Assistant"
-To see these blocks in action, we are building a script that:
-1.  **Triggers** at 7:00 AM (Orchestration).
-2.  **Perceives** the weather using "Eyes" (The Weather Tool).
-3.  **Writes** a summary, then **Double-Checks** it for accuracy (Reflection).
-4.  **Notes** the summary so it knows what it told you yesterday (The Notebook).
-5.  **Acts** by broadcasting the alert via Email/Discord (The Hands).
-6.  **Checks** that it isn't sending more than one summary a day (The Safety Switch).
+To see these blocks in action, we are building a script that uses every part of the system:
+
+1.  **Orchestration:** Triggers the agent automatically at 7:00 AM.
+2.  **The Eyes (Perception):** Uses the Weather Tool to find out if it's raining *right now*.
+3.  **The Brain (Reasoning):** Takes that raw data and writes a friendly summary for you.
+4.  **The Second Opinion (Reflection):** Reviews its own summary to catch typos or mistakes.
+5.  **The Notebook (Memory):** Saves today's summary to compare against tomorrow's weather.
+6.  **The Safety Switch (Guardrails):** Validates that the message isn't empty or broken before sending.
+7.  **The Hands (Action Tools):** Finally broadcasts the alert to your phone via Email or Discord.
 
 ## Learning Path
 1.  **[Notification MCPs](./guide-notification-tools.md):** The "Hands." Learn to manage **Side Effects**.
