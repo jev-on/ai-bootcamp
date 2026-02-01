@@ -1,45 +1,34 @@
 # Guide: Hello Agent (Your First LLM Call)
 
-Before we can build an autonomous agent, we need to learn how to talk to the "Brain" (The LLM) using code, rather than a chat app.
+Before we can build an autonomous agent, we need to learn how to talk to the "Brain" (The LLM) using code.
 
-## Prerequisites
-*   **Python Installed**
-*   **API Key:** You need a key from **one** of these providers:
-    *   **Anthropic (Claude):** [console.anthropic.com](https://console.anthropic.com/) (Requires credit deposit).
-    *   **Google (Gemini):** [aistudio.google.com](https://aistudio.google.com/) (Has a generous free tier).
+**Choose your path below:**
 
 ---
 
-## Step 1: Setup
+## Path A: Anthropic (Claude)
 
-1.  **Create a folder:**
-    ```bash
-    mkdir my-agent
-    cd my-agent
-    ```
+### 1. Prerequisites
+*   **API Key:** Get one from [console.anthropic.com](https://console.anthropic.com/).
+*   **Cost:** Requires a small credit deposit (approx. $5).
 
-2.  **Initialize & Install:**
-    We will install libraries for both providers so you can choose.
-    ```bash
-    uv init
-    uv add anthropic google-generativeai python-dotenv
-    ```
+### 2. Setup
+Run these commands in your terminal:
 
-3.  **Secure your Key:**
-    Create a file named `.env` and paste your key(s) inside. You only need one, but you can add both.
-    ```text
-    ANTHROPIC_API_KEY=sk-ant-api03-...
-    GEMINI_API_KEY=AIzaSy...
-    ```
-    **IMPORTANT:** Add `.env` to your `.gitignore` file so you never accidentally upload your key to GitHub!
+```bash
+mkdir agent-claude
+cd agent-claude
+uv init
+uv add anthropic python-dotenv
+```
 
----
+Create a `.env` file with your key:
+```text
+ANTHROPIC_API_KEY=sk-ant-...
+```
 
-## Step 2: The Code
-
-Create `hello_agent.py`. Choose the code below that matches the API key you have.
-
-### Option A: Using Anthropic (Claude)
+### 3. The Code
+Create `hello_claude.py`:
 
 ```python
 import os
@@ -61,29 +50,61 @@ response = client.messages.create(
 print(f"Claude says: {response.content[0].text}")
 ```
 
-### Option B: Using Google (Gemini)
+### 4. Run It
+```bash
+uv run hello_claude.py
+```
+
+---
+
+## Path B: Google (Gemini)
+
+### 1. Prerequisites
+*   **API Key:** Get one from [aistudio.google.com](https://aistudio.google.com/).
+*   **Cost:** Generous free tier available.
+
+### 2. Setup
+Run these commands in your terminal:
+
+```bash
+mkdir agent-gemini
+cd agent-gemini
+uv init
+uv add google-genai python-dotenv
+```
+
+Create a `.env` file with your key:
+```text
+GEMINI_API_KEY=AIzaSy...
+```
+
+### 3. The Code
+Create `hello_gemini.py`.
+*Note: We are using the modern `google-genai` SDK.*
 
 ```python
 import os
 from dotenv import load_dotenv
-import google.generativeai as genai
+from google import genai
 
 load_dotenv()
 
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-model = genai.GenerativeModel("gemini-1.5-flash")
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 print("Asking Gemini...")
-response = model.generate_content("Hello! Who are you?")
+response = client.models.generate_content(
+    model="gemini-2.0-flash",
+    contents="Hello! Who are you?"
+)
 print(f"Gemini says: {response.text}")
 ```
 
-## Step 3: Run It
-
+### 4. Run It
 ```bash
-uv run hello_agent.py
+uv run hello_gemini.py
 ```
-*Make sure you uncommented one of the options in the file!*
+
+---
 
 ## What just happened?
 You didn't use an app. **Your code** sent a message to the AI servers, waited for the "Brain" to think, and got the text back. 
