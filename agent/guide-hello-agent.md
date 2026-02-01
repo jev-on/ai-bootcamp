@@ -37,43 +37,45 @@ Before we can build an autonomous agent, we need to learn how to talk to the "Br
 
 ## Step 2: The Code
 
-Create `hello_agent.py`. Uncomment the section for the AI you want to use.
+Create `hello_agent.py`. Choose the code below that matches the API key you have.
+
+### Option A: Using Anthropic (Claude)
 
 ```python
 import os
 from dotenv import load_dotenv
+from anthropic import Anthropic
 
-# 1. Load the secret keys
 load_dotenv()
 
-# ==========================================
-# OPTION A: Use Anthropic (Claude)
-# ==========================================
-# from anthropic import Anthropic
-# 
-# client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-# print("Asking Claude...")
-# response = client.messages.create(
-#     model="claude-3-5-sonnet-20241022",
-#     max_tokens=1000,
-#     messages=[
-#         {"role": "user", "content": "Hello! Who are you?"}
-#     ]
-# )
-# print(f"Claude says: {response.content[0].text}")
+client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
+print("Asking Claude...")
+response = client.messages.create(
+    model="claude-3-5-sonnet-20241022",
+    max_tokens=1000,
+    messages=[
+        {"role": "user", "content": "Hello! Who are you?"}
+    ]
+)
+print(f"Claude says: {response.content[0].text}")
+```
 
-# ==========================================
-# OPTION B: Use Google (Gemini)
-# ==========================================
-# import google.generativeai as genai
-#
-# genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-# model = genai.GenerativeModel("gemini-1.5-flash")
-#
-# print("Asking Gemini...")
-# response = model.generate_content("Hello! Who are you?")
-# print(f"Gemini says: {response.text}")
+### Option B: Using Google (Gemini)
+
+```python
+import os
+from dotenv import load_dotenv
+import google.generativeai as genai
+
+load_dotenv()
+
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+model = genai.GenerativeModel("gemini-1.5-flash")
+
+print("Asking Gemini...")
+response = model.generate_content("Hello! Who are you?")
+print(f"Gemini says: {response.text}")
 ```
 
 ## Step 3: Run It
