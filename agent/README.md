@@ -1,6 +1,6 @@
 # Module 2: Building AI Agents
 
-In Module 1 (MCP), we built "Tools" (Hands). In Module 2, we will build the "Brain" that controls them.
+In Module 1 (MCP), we built "Tools" (Hands). In Module 2, we will build the LLM that controls them.
 
 ## What is an Agent?
 An **Agent** is a program that uses an LLM (Large Language Model) as its reasoning engine to perform multi-step tasks autonomously.

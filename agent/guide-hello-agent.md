@@ -1,6 +1,6 @@
 # Guide: Hello Agent (Your First LLM Call)
 
-Before we can build an autonomous agent, we need to learn how to talk to the "Brain" (The LLM) using code.
+Before we can build an autonomous agent, we need to learn how to talk to the LLM (Large Language Model) using code.
 
 **Choose your path below:**
 
@@ -131,6 +131,6 @@ uv run hello_gemini.py
 ---
 
 ## What just happened?
-You didn't use an app. **Your code** sent a message to the AI servers, waited for the "Brain" to think, and got the text back. 
+You didn't use an app. **Your code** sent a message to the AI servers, waited for the LLM to think, and got the text back. 
 
 This `response` object is the building block of everything. In the next guide, we will teach this script how to use your **Weather Tool**.

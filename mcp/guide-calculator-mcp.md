@@ -194,14 +194,14 @@ Now we need to tell Claude where to find your calculator.
 
 When you asked "What is 12345 + 67890?", a conversation happened between Claude and your script:
 
-1.  **Claude (The Brain):** "I need to add two numbers. I see a tool called `add_numbers`. I'll use that."
+1.  **Claude (The LLM):** "I need to add two numbers. I see a tool called `add_numbers`. I'll use that."
 2.  **Claude App (The Host):** Sends a message to your `calculator.py` script: 
     *   *Message:* `{"name": "add_numbers", "args": {"a": 12345, "b": 67890}}`
 3.  **calculator.py (The Server):** 
     *   Receives the message.
     *   Runs your python function `return 12345 + 67890`.
     *   Sends back the answer: `80235`.
-4.  **Claude (The Brain):** Receives the answer `80235` and writes the final response to you.
+4.  **Claude (The LLM):** Receives the answer `80235` and writes the final response to you.
 
 This is the power of MCP: **Claude didn't guess the answer; it actually ran your code to calculate it.**
 
