@@ -13,6 +13,12 @@ The [Model Context Protocol](./mcp/) is an open standard that enables AI assista
 *   **[Guide: Calculator MCP](./mcp/guide-calculator-mcp.md)**: Build a simple, local MCP server (No internet required).
 *   **[Guide: Weather MCP](./mcp/guide-weather-mcp.md)**: Build an internet-connected MCP server that uses APIs and tool-chaining.
 
+### 2. Building AI Agents
+Move beyond static tools. Build Python programs that can "think" and act autonomously.
+
+*   **[Overview](./agent/README.md)**: What is an Agent?
+*   **[Guide: Hello Agent](./agent/guide-hello-agent.md)**: Your first programmatic call to an LLM API.
+
 ---
 
 ### Future Modules (Coming Soon)
