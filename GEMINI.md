@@ -12,7 +12,7 @@ This repository is a structured learning environment for Artificial Intelligence
 
 **LLM Standards:**
 *   **Google:** Use `google-genai` (V1 SDK). Do NOT use `google-generativeai`.
-*   **Standard Model:** `gemini-3-flash` (Target model for 2026).
+*   **Standard Model:** `gemini-3-flash-preview` (Target model for 2026).
 *   **Anthropic:** Use `anthropic` SDK.
 *   **Documentation:** Guides must separate Claude and Gemini instructions into distinct "Path A" and "Path B" sections.
 

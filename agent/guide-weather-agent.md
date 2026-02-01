@@ -226,11 +226,11 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 tools = [get_coordinates, get_weather]
 
 # 5. Start the Autonomous Chat
-# We use gemini-3-flash and enable 'AUTO' function calling.
+# We use gemini-3-flash-preview and enable 'AUTO' function calling.
 # This means if Gemini needs the weather, it will ASK our script to run 
 # the Python functions, get the result, and continue the conversation!
 chat = client.chats.create(
-    model="gemini-3-flash",
+    model="gemini-3-flash-preview",
     config={
         "tools": tools, 
         "tool_config": {"function_calling_config": {"mode": "AUTO"}}

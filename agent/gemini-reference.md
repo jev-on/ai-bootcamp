@@ -11,8 +11,8 @@ Rate limits are enforced at the **Project Level**, meaning multiple API keys in 
 | **gemini-2.5-flash-lite** | 15 | 250,000 | 1,000 | 1,000,000 |
 | **gemini-2.5-flash** | 10 | 250,000 | 250 | 1,000,000 |
 | **gemini-2.5-pro** | 5 | 250,000 | 100 | 1,000,000 |
-| **gemini-3-flash (Preview)** | 15 | 250,000 | 250 | 1,000,000+ |
-| **gemini-3-pro (Preview)** | 10 | 250,000 | 100 | 1,000,000+ |
+| **gemini-3-flash-preview** | 15 | 250,000 | 250 | 1,000,000+ |
+| **gemini-3-pro-preview** | 10 | 250,000 | 100 | 1,000,000+ |
 
 ### Key Definitions:
 *   **RPM:** Requests Per Minute (How fast you can call).
