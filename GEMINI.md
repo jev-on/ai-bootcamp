@@ -39,9 +39,8 @@ The repository is organized by learning modules:
     *   Setup `hello-claude` and `hello-gemini`.
     *   Created `guide-weather-agent.md` (weather-claude, weather-gemini).
 *   **[IN PROGRESS] Module 3: Smart Agents (The Daily Briefing)**
-    *   Focus: Practical Automation & Scheduling.
-    *   New Tools: `email-mcp`, `discord-mcp` (or Telegram).
-    *   New Agent: `daily-briefing-agent`.
+    *   Focus: Advanced AI engineering pillars.
+    *   Topics: Side Effects (Action tools), Guardrails (Autonomous safety), Persistence (File state), Orchestration (Scheduling).
     *   Deployment: Local (NAS/Desktop) and Cloud (GitHub Actions).
 *   **[PLANNED] Module 4: The Platform**
     *   Focus: Systems Engineering.

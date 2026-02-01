@@ -23,15 +23,14 @@ Move beyond static tools. Build Python programs that can "think" and act autonom
 *   **[Guide: Weather Agent](./agent/guide-weather-agent.md)**: Build an autonomous agent loop that checks the weather.
 
 ### 3. Smart Agents (The Daily Briefing)
-Learn to build proactive assistants that run on a schedule and notify you where you already live (Email/Discord).
+Learn the four pillars of advanced AI engineering: Side Effects, Persistence, Guardrails, and Orchestration.
 
-*   **[Overview](./agent/smart-agent/README.md)**: Automation, Scheduling, and Safety.
-*   **[Guide: Email & Discord MCPs](./agent/smart-agent/guide-notification-tools.md)**: Building tools that can "Write" to the outside world.
-*   **[Guide: The Briefing Agent](./agent/smart-agent/guide-briefing-agent.md)**: Combining weather and notifications into one script.
-*   **[Guide: Scheduling (Local & GitHub Actions)](./agent/smart-agent/guide-scheduling.md)**: Setting your agent on autopilot.
+*   **[Overview](./agent/smart-agent/README.md)**: Proactive Automation and Safety.
+*   **[Guide: Notification MCPs](./agent/smart-agent/guide-notification-tools.md)**: Side Effects - Building tools that can "Write" to the outside world.
+*   **[Guide: The Briefing Agent](./agent/smart-agent/guide-briefing-agent.md)**: Persistence & Guardrails - Memory and Safety without a human.
+*   **[Guide: Scheduling](./agent/smart-agent/guide-scheduling.md)**: Orchestration - Setting your agent on autopilot.
 
 ---
 
 ### Future Modules
-*   **Module 3: Smart Agents**: Giving your agent Memory, Safety (Human-in-the-loop), and Planning capabilities.
 *   **Module 4: The Platform**: Building a Universal MCP Client to connect to *any* tool ecosystem.
