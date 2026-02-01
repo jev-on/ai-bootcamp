@@ -63,7 +63,115 @@ Different LLMs handle tools differently. Choose your path:
 
 ## Path A: Anthropic (Claude)
 
-*Coming Soon! We are finalizing the easiest way to teach the manual loop.*
+Claude handles tools using a **Manual Loop**. This is great because it lets you see exactly how the "Think-Act-Observe" cycle works step-by-step.
+
+### 1. Setup
+Make sure you are in your `agent-claude` folder.
+```bash
+cd agent-claude
+uv add anthropic requests
+```
+
+### 2. The Code
+Create `weather_agent_claude.py`. 
+
+```python
+import os
+import json
+from dotenv import load_dotenv
+from anthropic import Anthropic
+from weather_tools import get_coordinates, get_weather
+
+load_dotenv()
+client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+
+# 1. Define the tools for Claude
+# Claude needs a specific JSON format to understand what your tools do.
+tools_definition = [
+    {
+        "name": "get_coordinates",
+        "description": "Finds latitude and longitude for a city name.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "city_name": {"type": "string", "description": "The city name, e.g. London"}
+            },
+            "required": ["city_name"]
+        }
+    },
+    {
+        "name": "get_weather",
+        "description": "Fetches weather for a specific latitude and longitude.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "latitude": {"type": "number"},
+                "longitude": {"type": "number"}
+            },
+            "required": ["latitude", "longitude"]
+        }
+    }
+]
+
+def run_agent(user_message):
+    # Step 1: THE THINKING PHASE
+    # We send the message and the tool definitions to Claude.
+    messages = [{"role": "user", "content": user_message}]
+    
+    response = client.messages.create(
+        model="claude-3-5-sonnet-20241022",
+        max_tokens=1024,
+        tools=tools_definition,
+        messages=messages
+    )
+
+    # Step 2: THE ACTING PHASE
+    # We check if Claude wants to use a tool.
+    while response.stop_reason == "tool_use":
+        # Find the tool request in the response
+        tool_use = next(block for block in response.content if block.type == "tool_use")
+        tool_name = tool_use.name
+        tool_input = tool_use.input
+
+        # Actually run the Python function
+        if tool_name == "get_coordinates":
+            result = get_coordinates(tool_input["city_name"])
+        elif tool_name == "get_weather":
+            result = get_weather(tool_input["latitude"], tool_input["longitude"])
+
+        # Step 3: THE OBSERVING PHASE
+        # We put the tool result into a new message and send it back to Claude.
+        messages.append({"role": "assistant", "content": response.content})
+        messages.append({
+            "role": "user", 
+            "content": [
+                {
+                    "type": "tool_result",
+                    "tool_use_id": tool_use.id,
+                    "content": json.dumps(result)
+                }
+            ]
+        })
+
+        # Ask Claude to think again now that it has the tool data
+        response = client.messages.create(
+            model="claude-3-5-sonnet-20241022",
+            max_tokens=1024,
+            tools=tools_definition,
+            messages=messages
+        )
+
+    return response.content[0].text
+
+print("Agent ready! Ask me about the weather.")
+query = input("You: ")
+print(f"Agent: {run_agent(query)}")
+```
+
+### 3. Run It
+```bash
+uv run weather_agent_claude.py
+```
 
 ---
 

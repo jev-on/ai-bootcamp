@@ -14,8 +14,7 @@ Unlike a simple chatbot, an agent can:
 1.  **[LLM vs. Agent](./llm-vs-agent.md):** Understanding the "Chef vs. Kitchen" analogy.
 2.  **[Hello Agent](./guide-hello-agent.md):** Writing your first Python script to talk to an LLM API.
 3.  **[Gemini API Reference](./gemini-reference.md):** Rate limits and privacy info (2026).
-4.  **[Guide: Weather Agent](./guide-weather-agent.md):** Connect your Weather functions to the LLM and build an autonomous loop.
-3.  **The Loop:** (Coming Soon) Building the "Think-Act-Observe" loop.
+4.  **[Guide: Weather Agent](./guide-weather-agent.md):** The "Think-Act-Observe" loop. Connect your Weather functions to the LLM and build an autonomous agent.
 
 ## Prerequisites
 *   **API Key:** You will need an API key from an LLM provider (Anthropic, OpenAI, or Gemini).
