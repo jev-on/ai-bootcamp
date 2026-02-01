@@ -21,7 +21,17 @@ This repository is a structured learning environment for Artificial Intelligence
 *   Style: Prefer synchronous code (`def`) and `requests` library for readability in beginner guides.
 *   Avoid `async/await` complexity unless necessary for performance.
 
-## 3. Current Progress
+## 3. Directory Structure
+The repository is organized by learning modules:
+*   **`mcp/` (Module 1):** Documentation and guides for the Model Context Protocol.
+    *   Contains: `guide-calculator-mcp.md`, `guide-weather-mcp.md`.
+*   **`agent/` (Module 2):** Documentation for building Autonomous Agents.
+    *   Contains: `guide-hello-agent.md`, `gemini-reference.md`.
+*   **Root Files:**
+    *   `GEMINI.md`: Context anchor for the AI assistant (Tech stack, progress, rules).
+    *   `README.md`: The curriculum homepage for students.
+
+## 4. Current Progress
 *   **[COMPLETE] Module 1: MCP**
     *   Created `calculator-mcp` (Local logic).
     *   Created `weather-mcp` (Open-Meteo API, Tool Chaining).
@@ -30,7 +40,7 @@ This repository is a structured learning environment for Artificial Intelligence
     *   Established connection to LLM APIs via Python.
     *   Next Step: Binding MCP tools to the Agent script.
 
-## 4. Useful Commands
+## 5. Useful Commands
 *   Run script: `uv run filename.py`
 *   Add dependencies: `uv add library_name`
 *   Inspector: `uv run mcp-inspector script.py`
