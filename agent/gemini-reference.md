@@ -46,3 +46,9 @@ If your automation uses advanced features, additional shared limits apply:
 *   **Error Handling:** Watch for **HTTP 429 (Resource Exhausted)**. Implement an exponential backoff strategy in your script.
 *   **Lite for Logic:** Use `flash-lite` for the "Orchestrator" glue code to maximize your daily 1,000 request quota.
 *   **Tier 1 Upgrade:** Simply linking a credit card (without spending) usually upgrades you to **Tier 1**, which significantly increases RPM and TPM limits while providing data privacy.
+
+---
+
+## 5. Official Documentation
+
+*   **[Gemini API Python Quickstart](https://ai.google.dev/gemini-api/docs/quickstart)** - The official guide for the SDK we are using in this module.
