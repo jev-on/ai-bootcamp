@@ -31,14 +31,16 @@ When you used the MCP server before, the Claude app was the agent. Now, **YOU** 
 Claude handles tools using a **Manual Loop**. This is great because it lets you see exactly how the "Think-Act-Observe" cycle works step-by-step.
 
 ### 1. Setup
-Make sure you are in your `agent-claude` folder.
+Create a new folder for this agent:
 ```bash
-cd agent-claude
-uv add anthropic requests
+mkdir weather-claude
+cd weather-claude
+uv init
+uv add anthropic requests python-dotenv
 ```
 
 ### 2. Create the Tools
-Create a file named `weather_tools.py` inside your `agent-claude` folder.
+Create a file named `weather_tools.py` inside your `weather-claude` folder.
 
 ```python
 import requests
@@ -168,15 +170,16 @@ uv run weather_agent_claude.py
 Gemini has a feature called **"Automatic Function Calling"**. You just give it the functions, and it handles the loop for you!
 
 ### 1. Setup
-Make sure you are in your `agent-gemini` folder.
+Create a new folder for this agent:
 ```bash
-cd agent-gemini
-# Ensure you have the library
-uv add google-genai requests
+mkdir weather-gemini
+cd weather-gemini
+uv init
+uv add google-genai requests python-dotenv
 ```
 
 ### 2. Create the Tools
-Create a file named `weather_tools.py` inside your `agent-gemini` folder.
+Create a file named `weather_tools.py` inside your `weather-gemini` folder.
 
 ```python
 import requests

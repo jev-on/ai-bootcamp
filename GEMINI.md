@@ -36,9 +36,9 @@ The repository is organized by learning modules:
     *   Created `calculator-mcp` (Local logic).
     *   Created `weather-mcp` (Open-Meteo API, Tool Chaining).
 *   **[IN PROGRESS] Module 2: Agents**
-    *   Setup `agent-claude` and `agent-gemini`.
+    *   Setup `hello-claude` and `hello-gemini`.
     *   Established connection to LLM APIs via Python.
-    *   Created `guide-weather-agent.md` (Auto-function calling).
+    *   Created `guide-weather-agent.md` (weather-claude, weather-gemini).
 *   **[PLANNED] Module 3: Smart Agents**
     *   Focus: Logic Patterns (not infrastructure).
     *   Topics: Memory (JSON persistence), Human-in-the-Loop (Safety), Planning chains.

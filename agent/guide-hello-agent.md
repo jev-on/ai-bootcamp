@@ -19,8 +19,8 @@ Before we can build an autonomous agent, we need to learn how to talk to the LLM
 Run these commands in your terminal:
 
 ```bash
-mkdir agent-claude
-cd agent-claude
+mkdir hello-claude
+cd hello-claude
 uv init
 uv add anthropic python-dotenv
 ```
@@ -81,8 +81,8 @@ uv run hello_claude.py
 Run these commands in your terminal:
 
 ```bash
-mkdir agent-gemini
-cd agent-gemini
+mkdir hello-gemini
+cd hello-gemini
 uv init
 uv add google-genai python-dotenv
 ```
