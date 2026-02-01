@@ -13,7 +13,7 @@ Unlike a simple chatbot, an agent can:
 ## Learning Path
 1.  **[Hello Agent](./guide-hello-agent.md):** Writing your first Python script to talk to an LLM API.
 2.  **[Gemini API Reference](./gemini-reference.md):** Rate limits and privacy info (2026).
-3.  **Tool Binding:** (Coming Soon) Connecting your Weather MCP to your Agent.
+3.  **[Guide: Weather Agent](./guide-weather-agent.md):** Connect your Weather functions to the LLM and build an autonomous loop.
 3.  **The Loop:** (Coming Soon) Building the "Think-Act-Observe" loop.
 
 ## Prerequisites
