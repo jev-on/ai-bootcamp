@@ -11,9 +11,10 @@ Unlike a simple chatbot, an agent can:
 3.  **Observe:** Read the tool's output and decide what to do next.
 
 ## Learning Path
-1.  **[Hello Agent](./guide-hello-agent.md):** Writing your first Python script to talk to an LLM API.
-2.  **[Gemini API Reference](./gemini-reference.md):** Rate limits and privacy info (2026).
-3.  **[Guide: Weather Agent](./guide-weather-agent.md):** Connect your Weather functions to the LLM and build an autonomous loop.
+1.  **[LLM vs. Agent](./llm-vs-agent.md):** Understanding the "Chef vs. Kitchen" analogy.
+2.  **[Hello Agent](./guide-hello-agent.md):** Writing your first Python script to talk to an LLM API.
+3.  **[Gemini API Reference](./gemini-reference.md):** Rate limits and privacy info (2026).
+4.  **[Guide: Weather Agent](./guide-weather-agent.md):** Connect your Weather functions to the LLM and build an autonomous loop.
 3.  **The Loop:** (Coming Soon) Building the "Think-Act-Observe" loop.
 
 ## Prerequisites
