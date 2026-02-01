@@ -6,10 +6,6 @@ In this guide, we will build a **Weather Agent**.
 *   It won't just "chat." 💬
 *   It will **autonomously** use Python functions to look up real-time data from the internet! 🌍
 
-**Choose your path below:**
-*   [**Path A: Anthropic (Claude)**](#path-a-anthropic-claude) - Manual tool loop (The "Mechanics" path).
-*   [**Path B: Google (Gemini)**](#path-b-google-gemini) - Automatic tool loop (The "Self-Driving" path).
-
 ## The Concept: The Agent Loop 🔄
 
 **Buckle up! This is the most exciting part yet.** 🎢
@@ -25,6 +21,10 @@ When you used the MCP server before, the Claude app handled all the hard work be
 3.  **Your Script (Act):** Sees the request. Runs the Python function. Gets "15°C".
 4.  **LLM (Observe):** Sees the result "15°C".
 5.  **LLM (Answer):** "The weather in Tokyo is 15°C."
+
+**Choose your path below:**
+*   [**Path A: Anthropic (Claude)**](#path-a-anthropic-claude) - Manual tool loop (The "Mechanics" path).
+*   [**Path B: Google (Gemini)**](#path-b-google-gemini) - Automatic tool loop (The "Self-Driving" path).
 
 ## Path A: Anthropic (Claude)
 
