@@ -10,13 +10,27 @@ Build a "Daily Briefing Agent" that:
 4.  **Notifies you** via Email and/or Discord.
 
 ## What you will learn
-Building a scheduled agent teaches you the five pillars of advanced AI engineering:
+In this module, we move from "Toys" to "Production Systems" by mastering the **5 Pillars of Agentic Design**:
 
-1.  **Side Effects (Action Tools):** Building MCPs that *write* or *send* (not just read). 
-2.  **Guardrails (Safety):** Implementing autonomous validation to ensure your agent doesn't spam or send empty data (Safety without a human-in-the-loop).
-3.  **Persistence (Memory):** Using simple files to save state so your agent "remembers" what it sent yesterday.
-4.  **Reflection (Self-Correction):** Teaching your agent to review and critique its own work before finishing a task.
-5.  **Orchestration (Scheduling):** Moving from a script you run manually to a service that runs on autopilot (Local vs Cloud).
+1.  **Side Effects (Action Tools) ⚡**
+    *   **Concept:** Learning how to manage tools that *change* the world (Send Email, Delete File, Buy Stock) rather than just *reading* data (Calculator, Weather).
+    *   **Why it matters:** Real agents are useless if they can't take action.
+
+2.  **Autonomous Guardrails (Safety) 🛡️**
+    *   **Concept:** Writing deterministic code (Python logic) that checks the AI's "Tool Requests" before they execute.
+    *   **Why it matters:** Since this runs on a schedule (Cron), there is no human to stop the bot if it decides to send 1,000 emails by mistake.
+
+3.  **State Persistence (Memory) 💾**
+    *   **Concept:** Saving the agent's work to a file (JSON) so it "remembers" context between separate runs.
+    *   **Why it matters:** Most LLMs are "stateless" (they forget everything after the script ends). Persistence gives them a "long-term memory."
+
+4.  **Reflection (Self-Correction) 🧐**
+    *   **Concept:** The "Editor Pattern." Forcing the AI to critique its own draft and fix errors before the final output.
+    *   **Why it matters:** It dramatically increases the quality and reliability of the agent's response.
+
+5.  **Orchestration (Scheduling) ⏰**
+    *   **Concept:** Moving from "User-Triggered" code to "System-Triggered" services using Cron and GitHub Actions.
+    *   **Why it matters:** This is how you turn a script into a reliable automated employee.
 
 ## Learning Path
 1.  **[Email & Discord MCPs](./guide-notification-tools.md):** The "Hands." Learn to manage **Side Effects**.
