@@ -4,33 +4,51 @@ Welcome to the AI Bootcamp! This repository is a dedicated space for learning th
 
 Here, we explore core concepts, build hands-on projects, and document our journey from AI beginners to advanced practitioners.
 
-## Curriculum Modules
+## 🎓 Curriculum Path
 
-### 1. Model Context Protocol (MCP)
-The [Model Context Protocol](./mcp/) is an open standard that enables AI assistants to connect to external data and tools.
+### 🛠️ Phase 1: The Foundation (Tools)
+Focuses on building the "Hands" of the AI using the Model Context Protocol (MCP).
 
-*   **[Overview](./mcp/README.md)**: High-level concepts and architecture.
-*   **[Guide: Calculator MCP](./mcp/guide-calculator-mcp.md)**: Build a simple, local MCP server (No internet required).
-*   **[Guide: Weather MCP](./mcp/guide-weather-mcp.md)**: Build an internet-connected MCP server that uses APIs and tool-chaining.
-
-### 2. Building AI Agents
-Move beyond static tools. Build Python programs that can "think" and act autonomously.
-
-*   **[Overview](./agent/README.md)**: What is an Agent?
-*   **[LLM vs Agent](./agent/basics/learn-llm-vs-agent.md)**: Understanding the "Chef vs. Kitchen" analogy.
-*   **[Guide: Hello Agent](./agent/basics/guide-hello-agent.md)**: Your first programmatic call to an LLM API.
-*   **[Reference: Gemini API](./agent/basics/ref-gemini-api.md)**: Rate limits and model info.
-*   **[Guide: Weather Agent](./agent/basics/guide-weather-agent.md)**: Build an autonomous agent loop that checks the weather.
-
-### 3. Smart Agents (The Daily Briefing)
-Learn the four pillars of advanced AI engineering: Side Effects, Persistence, Guardrails, and Orchestration.
-
-*   **[Overview](./agent/smart-agent/README.md)**: Proactive Automation and Safety.
-*   **[Guide: Notification MCPs](./agent/smart-agent/guide-notification-tools.md)**: Side Effects - Building tools that can "Write" to the outside world.
-*   **[Guide: The Briefing Agent](./agent/smart-agent/guide-briefing-agent.md)**: Persistence & Guardrails - Memory and Safety without a human.
-*   **[Guide: Scheduling](./agent/smart-agent/guide-scheduling.md)**: Orchestration - Setting your agent on autopilot.
+**Module 1: Model Context Protocol**
+*   **Concepts:**
+    *   **[Overview](./mcp/README.md)**: High-level concepts and architecture.
+*   **Guides (Build It):**
+    *   **[1. Calculator MCP](./mcp/guide-calculator-mcp.md)**: Your first local tool (No internet required).
+    *   **[2. Weather MCP](./mcp/guide-weather-mcp.md)**: Connecting to real-world APIs and tool-chaining.
 
 ---
 
-### Future Modules
-*   **Module 4: The Platform**: Building a Universal MCP Client to connect to *any* tool ecosystem.
+### 🧠 Phase 2: The Intelligence (Agents)
+Focuses on building the "Brain" and the autonomous logic loops.
+
+**Module 2: Agent Basics**
+*   **Concepts:**
+    *   **[Overview](./agent/README.md)**: What is an Agent?
+    *   **[LLM vs Agent](./agent/basics/learn-llm-vs-agent.md)**: Understanding the Chef vs. Kitchen analogy.
+    *   **[Reference: Gemini API](./agent/basics/ref-gemini-api.md)**: Understanding models and rate limits.
+*   **Guides (Build It):**
+    *   **[1. Hello Agent](./agent/basics/guide-hello-agent.md)**: Making your first programmatic LLM call.
+    *   **[2. Weather Agent](./agent/basics/guide-weather-agent.md)**: Building the full "Think-Act-Observe" loop.
+
+---
+
+### 🤖 Phase 3: The System (Automation)
+Focuses on building "Production-Ready" agents that work autonomously in the background.
+
+**Module 3: Smart Agents (The Daily Briefing)**
+*   **Concepts:**
+    *   **[Module Overview](./agent/smart-agent/README.md)**: The 4 Pillars of AI Engineering (Side Effects, Guardrails, Persistence, Orchestration).
+*   **Guides (Build It):**
+    *   **[1. Notification Tools](./agent/smart-agent/guide-notification-tools.md)**: Building Email and Discord MCPs.
+    *   **[2. The Briefing Agent](./agent/smart-agent/guide-briefing-agent.md)**: Putting it all together.
+    *   **[3. Scheduling](./agent/smart-agent/guide-scheduling.md)**: Setting the agent on autopilot.
+
+---
+
+### 🚀 Roadmap (Future Modules)
+*   **Module 4: The Platform**: Building a Universal MCP Client using system pipes to connect to ANY tool ecosystem.
+
+---
+
+### Prerequisites
+*   **Python:** Basic knowledge of Python functions.
