@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from google import genai
 
-from wiki_tools import get_wikipedia_summary
+from wiki_tools import get_wikipedia_summary, search_wikipedia
 
 # Load API Key from .env
 load_dotenv()
@@ -11,7 +11,7 @@ load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Register the Python function as a tool
-tools = [get_wikipedia_summary]
+tools = [get_wikipedia_summary, search_wikipedia]
 
 # Start the Autonomous Chat
 chat = client.chats.create(
